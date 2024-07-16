@@ -2,7 +2,7 @@
 
 This docker image support swagger ui with multi select apis.
 
-Dockerhub: [Link to Dockerhub](https://hub.docker.com/r/volbrene/swagger-ui)
+Dockerhub: [Link to Dockerhub](https://hub.docker.com/r/calebswhite/swagger-ui)
 
 # How to use?
 
@@ -10,7 +10,7 @@ Dockerhub: [Link to Dockerhub](https://hub.docker.com/r/volbrene/swagger-ui)
 docker run -d \
     -p 8080:80 \
     -e URLS="[{url: 'https://petstore.swagger.io/v2/swagger.json', name: 'Petshop'},{url: 'https://api.apis.guru/v2/specs/instagram.com/1.0.0/swagger.yaml', name: 'Instagram'}]" \
-     volbrene/swagger-ui
+     calebswhite/swagger-ui
 ```
 
 That's it.

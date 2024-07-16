@@ -1,27 +1,26 @@
-import React, { Component } from "react";
-import "./SelectApiPage.css";
-import Logo from "../logo.png";
-import AppFooter from "../AppFooter/AppFooter";
-import SelectApi from "../SelectApi/SelectApi";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import './SelectApiPage.css';
+import Logo from '../logo.png';
+import AppFooter from '../AppFooter/AppFooter';
+import SelectApi from '../SelectApi/SelectApi';
 
-class SelectApiPage extends Component {
-  handleChange = selectedApi => {
-    this.props.history.push(selectedApi.value);
-  };
+function SelectApiPage() {
+  let navigate = useNavigate();
 
-  render() {
-    return (
-      <div>
-        <div className="search-wrapper">
-          <div>
-            <img src={Logo} alt="Swagger Ui" />
-            <SelectApi autoFocus="true" onChange={this.handleChange} />
-          </div>
+  const handleChange = selectedApi => navigate(selectedApi.value);
+
+  return (
+    <div>
+      <div className="search-wrapper">
+        <div>
+          <img src={Logo} alt="Swagger Ui" />
+          <SelectApi autoFocus="true" onChange={handleChange} />
         </div>
-        <AppFooter />
       </div>
-    );
-  }
+      <AppFooter />
+    </div>
+  );
 }
 
 export default SelectApiPage;
