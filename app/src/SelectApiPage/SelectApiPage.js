@@ -6,9 +6,9 @@ import AppFooter from '../AppFooter/AppFooter';
 import SelectApi from '../SelectApi/SelectApi';
 
 function SelectApiPage() {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
-  const handleChange = selectedApi => navigate(selectedApi.value);
+  const handleChange = selectedApi => navigate('/' + selectedApi.value);
 
   return (
     <div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
@@ -7,6 +7,10 @@ import * as serviceWorker from './serviceWorker';
 import SwaggerUiPage from './SwaggerUiPage/SwaggerUiPage';
 import SelectApiPage from './SelectApiPage/SelectApiPage';
 import AppFooter from './AppFooter/AppFooter';
+
+if (document.title === '%PAGE_TITLE%' && window?._env_?.PAGE_TITLE) {
+  document.title = window._env_.PAGE_TITLE;
+}
 
 const router = createBrowserRouter([
   {

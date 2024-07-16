@@ -16,14 +16,21 @@ function SwaggerUiPage() {
     url: item.url,
   }));
 
-  const [activeApi, setActiveApi] = useState({
-    url: availableApis.find(element => element.value === params.api).url || '',
-  });
+  const activeApiFromQuery = availableApis.find(element => element.value === params.api);
+
+  let activeApiInit = { url: '' };
+  if (activeApiFromQuery) {
+    activeApiInit = activeApiFromQuery;
+  } else {
+    navigate('/');
+  }
+
+  const [activeApi, setActiveApi] = useState(activeApiInit);
 
   const handleChange = selectedApi => {
     setActiveApi(selectedApi);
 
-    navigate(selectedApi.value);
+    navigate('/' + selectedApi.value);
   };
 
   return (
