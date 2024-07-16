@@ -1,5 +1,5 @@
 # Stage 1
-FROM node:18-alpine as react-build
+FROM node:18-alpine as vite-build
 WORKDIR /app
 COPY ./app/ .
 RUN npm install
@@ -16,7 +16,7 @@ ENV PAGE_TITLE="Swagger Ui"
 
 WORKDIR /var/www/html
 
-COPY --from=react-build /app/build /var/www/html
+COPY --from=vite-build /app/dist /var/www/html
 COPY ./docker/run.sh /
 COPY ./docker/default.conf /etc/nginx/conf.d
 

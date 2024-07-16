@@ -1,4 +1,3 @@
-import React from 'react';
 import './AppFooter.css';
 
 function AppFooter() {

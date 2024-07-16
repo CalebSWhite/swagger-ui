@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import reportWebVitals from './reportWebVitals';
-import * as serviceWorker from './serviceWorker';
 import SwaggerUiPage from './SwaggerUiPage/SwaggerUiPage';
 import SelectApiPage from './SelectApiPage/SelectApiPage';
 import AppFooter from './AppFooter/AppFooter';
+import './index.css';
 
 if (document.title === '%PAGE_TITLE%' && window?._env_?.PAGE_TITLE) {
   document.title = window._env_.PAGE_TITLE;
@@ -32,13 +30,3 @@ root.render(
     </div>
   </React.StrictMode>,
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();

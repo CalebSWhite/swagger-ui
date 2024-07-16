@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './SwaggerUiPage.css';
 import Logo from '../logo.png';
 import slugify from 'slugify';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import SelectApi from '../SelectApi/SelectApi';
+import SelectApi from '../SelectApi/SelectApi.jsx';
 import SwaggerUI from 'swagger-ui-react';
 import 'swagger-ui-react/swagger-ui.css';
 

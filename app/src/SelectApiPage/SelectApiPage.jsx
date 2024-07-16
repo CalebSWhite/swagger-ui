@@ -1,9 +1,8 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './SelectApiPage.css';
 import Logo from '../logo.png';
-import AppFooter from '../AppFooter/AppFooter';
-import SelectApi from '../SelectApi/SelectApi';
+import AppFooter from '../AppFooter/AppFooter.jsx';
+import SelectApi from '../SelectApi/SelectApi.jsx';
 
 function SelectApiPage() {
   const navigate = useNavigate();
